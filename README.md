@@ -1,14 +1,22 @@
-         ___        ______     ____ _                 _  ___  
-        / \ \      / / ___|   / ___| | ___  _   _  __| |/ _ \ 
-       / _ \ \ /\ / /\___ \  | |   | |/ _ \| | | |/ _` | (_) |
-      / ___ \ V  V /  ___) | | |___| | (_) | |_| | (_| |\__, |
-     /_/   \_\_/\_/  |____/   \____|_|\___/ \__,_|\__,_|  /_/ 
- ----------------------------------------------------------------- 
+# Reflections Family Moods Board App
 
+React + Vite starter for a seasonal and cinematic mood board.
 
-Hi there! Welcome to AWS Cloud9!
+## Run locally
 
-To get started, create some files, play with the terminal,
-or visit https://docs.aws.amazon.com/console/cloud9/ for our documentation.
+```bash
+npm install
+npm run dev
+```
 
-Happy coding!
+## Build for production
+
+```bash
+npm run build
+npm run preview
+```
+
+## Notes
+
+- Legacy static files remain in place (`css/`, `js/`, `index2.html`) for reference.
+- Main app entry is `src/App.jsx`.

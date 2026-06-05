@@ -1,0 +1,331 @@
+:root {
+    --ink: #1b1d24;
+    --paper: #f8f3ea;
+    --accent: #bc6c25;
+    --accent-soft: #dda15e;
+    --card: rgba(255, 255, 255, 0.66);
+    --shadow: rgba(31, 22, 10, 0.12);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Dosis', sans-serif;
+    color: var(--ink);
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 20% 0%, rgba(255, 225, 179, 0.6), transparent 40%),
+        radial-gradient(circle at 80% 10%, rgba(174, 216, 255, 0.4), transparent 36%),
+        linear-gradient(180deg, #f6efe4 0%, #ebe0d1 100%);
+}
+
+.app-shell {
+    width: min(1100px, 92vw);
+    margin: 0 auto;
+    padding: 2.4rem 0 3rem;
+}
+
+.hero {
+    background: rgba(255, 255, 255, 0.52);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 18px 30px -20px var(--shadow);
+    padding: 1.5rem 1.2rem;
+}
+
+.kicker {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: #6c584c;
+}
+
+.hero h1 {
+    margin: 0.3rem 0;
+    font-size: clamp(2rem, 6vw, 3.6rem);
+}
+
+.subtitle {
+    margin: 0;
+    color: #5b473a;
+    font-size: 1.1rem;
+}
+
+.filters {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.chip {
+    border: 1px solid #b8a08a;
+    background: #f9f2e5;
+    color: #3f3027;
+    border-radius: 999px;
+    padding: 0.5rem 0.95rem;
+    cursor: pointer;
+    font: inherit;
+}
+
+.chip-active {
+    border-color: var(--accent);
+    background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+    color: #fff;
+}
+
+.grid {
+    margin-top: 1.2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0.9rem;
+}
+
+.mood-card {
+    background: var(--card);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 16px;
+    padding: 0.9rem;
+    box-shadow: 0 18px 24px -24px rgba(0, 0, 0, 0.42);
+    animation: rise-in 500ms ease both;
+}
+
+.mood-card h2 {
+    margin: 0.55rem 0 0.2rem;
+    font-size: 1.24rem;
+}
+
+.mood-card p {
+    margin: 0;
+    color: #695343;
+}
+
+.swatches {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.swatch-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    min-width: 0;
+}
+
+.swatch {
+    display: block;
+    width: 100%;
+    min-height: 112px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease,
+        filter 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.swatch .label {
+    display: block;
+    padding: 0.75rem;
+    color: rgba(27, 29, 36, 0.78);
+    font-size: 0.82rem;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+    transition: opacity 0.35s ease;
+}
+
+.swatch:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.swatch-row {
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes rise-in {
+    from {
+        transform: translateY(8px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.swatch.radial-glow:hover {
+    box-shadow:
+        inset 0 0 0 999px rgba(255, 255, 255, 0.2),
+        0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+.swatch.shimmer:hover::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.35) 50%,
+            transparent 100%);
+    animation: shimmer-move 1.2s ease forwards;
+}
+
+@keyframes shimmer-move {
+    from {
+        transform: translateX(-120%);
+    }
+
+    to {
+        transform: translateX(120%);
+    }
+}
+
+.swatch.fade-text:hover .label {
+    opacity: 0.55;
+}
+
+.swatch.tilt:hover {
+    transform: translateY(-3px) rotate(1deg);
+}
+
+.swatch.drift:hover {
+    animation: drift 1.8s ease forwards;
+}
+
+@keyframes drift {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(12deg);
+    }
+}
+
+.swatch.orb-pulse:hover {
+    box-shadow:
+        0 0 12px rgba(255, 240, 210, 0.45),
+        0 0 24px rgba(255, 220, 180, 0.25);
+}
+
+.swatch-row.spring .swatch:hover {
+    animation: spring-drift 2.2s ease forwards;
+    border-color: rgba(120, 170, 140, 0.45);
+    transform: translateY(-2px);
+}
+
+@keyframes spring-drift {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(10deg);
+    }
+}
+
+.swatch-row.summer::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg,
+            transparent 0%,
+            rgba(255, 225, 180, 0.25) 50%,
+            transparent 100%);
+    transform: translateX(-120%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.swatch-row.summer:hover::after {
+    opacity: 1;
+    animation: summer-shimmer 1.6s ease forwards;
+}
+
+@keyframes summer-shimmer {
+    from {
+        transform: translateX(-120%);
+        opacity: 0.2;
+    }
+
+    to {
+        transform: translateX(120%);
+        opacity: 0.4;
+    }
+}
+
+.swatch-row.autumn .swatch {
+    transition-delay: 0s;
+}
+
+.swatch-row.autumn .swatch:hover {
+    transform: rotate(1deg);
+}
+
+.swatch-row.autumn:hover .swatch-wrapper:nth-child(1) .swatch {
+    transition-delay: 0s;
+}
+
+.swatch-row.autumn:hover .swatch-wrapper:nth-child(2) .swatch {
+    transition-delay: 0.05s;
+}
+
+.swatch-row.autumn:hover .swatch-wrapper:nth-child(3) .swatch {
+    transition-delay: 0.1s;
+}
+
+.swatch-row.autumn:hover .swatch-wrapper:nth-child(4) .swatch {
+    transition-delay: 0.15s;
+}
+
+.swatch-row.autumn:hover .swatch-wrapper:nth-child(5) .swatch {
+    transition-delay: 0.2s;
+}
+
+.swatch-row.winter .swatch:hover {
+    box-shadow:
+        inset 0 0 0 999px rgba(200, 220, 255, 0.12),
+        0 0 12px rgba(180, 210, 255, 0.25);
+}
+
+.swatch-row.winter .swatch:hover .label {
+    opacity: 0.5;
+}
+
+.swatch-row.calm .swatch:hover {
+    box-shadow: 0 0 12px rgba(240, 235, 225, 0.35);
+}
+
+.swatch-row.reflections .swatch:hover {
+    box-shadow:
+        0 0 12px rgba(255, 240, 210, 0.45),
+        0 0 24px rgba(255, 220, 180, 0.25);
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .filters {
+        justify-content: center;
+    }
+
+    .swatch-wrapper {
+        gap: 2px;
+    }
+
+    .swatch .label {
+        font-size: 0.75rem;
+    }
+}

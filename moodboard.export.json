@@ -1,0 +1,1285 @@
+{
+  "meta": {
+    "name": "moodsboard",
+    "version": "1.0.0",
+    "description": "Portable seasonal palettes, curated mood swatches, cinematic and blended swatches, and weather-to-mood mapping.",
+    "sourcePackage": "other-traversing-methods",
+    "exportedAt": "2026-06-05T20:03:18.155Z"
+  },
+  "seasonalPalettes": {
+    "spring": {
+      "name": "Spring — Soft Renewal",
+      "palette": {
+        "primary": "#DDF5D7",
+        "secondary": "#B7E3C1",
+        "accent": "#69C58F",
+        "shadow": "#3E8F68",
+        "text": "#213F35"
+      }
+    },
+    "summer": {
+      "name": "Summer — Quiet Warmth",
+      "palette": {
+        "primary": "#FFF0C8",
+        "secondary": "#F7C77E",
+        "accent": "#F28B5B",
+        "shadow": "#B85F3E",
+        "text": "#3F251C"
+      }
+    },
+    "autumn": {
+      "name": "Autumn — Velvet Dusk",
+      "palette": {
+        "primary": "#F0D8C2",
+        "secondary": "#D49A66",
+        "accent": "#A95832",
+        "shadow": "#6F3425",
+        "text": "#2F1D18"
+      }
+    },
+    "winter": {
+      "name": "Winter — Moonlit Quiet",
+      "palette": {
+        "primary": "#DCEAF7",
+        "secondary": "#9FBAD4",
+        "accent": "#517BA6",
+        "shadow": "#223E5C",
+        "text": "#111C2E"
+      }
+    }
+  },
+  "moodSwatches": {
+    "calm": {
+      "label": "Calm — Studio Neutral",
+      "swatches": [
+        "#EDEDED",
+        "#D9D9D9",
+        "#C4C4C4",
+        "#AFAFAF",
+        "#8C8C8C"
+      ]
+    },
+    "joyful": {
+      "label": "Joyful",
+      "swatches": [
+        "#FFE8A3",
+        "#FFD27F",
+        "#FFBC5A",
+        "#FFA533",
+        "#FF8C00"
+      ]
+    },
+    "stormy": {
+      "label": "Stormy",
+      "swatches": [
+        "#DDE1E6",
+        "#B8C0CC",
+        "#8F9AA8",
+        "#6A7480",
+        "#4A525C"
+      ]
+    },
+    "reflective": {
+      "label": "Reflective",
+      "swatches": [
+        "#F2EFEA",
+        "#D9D4CC",
+        "#C1BBB2",
+        "#A8A197",
+        "#8F887E"
+      ]
+    },
+    "natural": {
+      "label": "Natural",
+      "swatches": [
+        "#E8F0E5",
+        "#CDE0C9",
+        "#B2D0AD",
+        "#8FB88A",
+        "#6A9F66"
+      ]
+    },
+    "orbGlow": {
+      "label": "Reflections — Orb Glow",
+      "swatches": [
+        "#FDF7E3",
+        "#F9EEC6",
+        "#F4E5AA",
+        "#EFD98C",
+        "#E9CC6E"
+      ]
+    }
+  },
+  "cinematicPalettes": [
+    {
+      "id": "noir",
+      "name": "Noir Indigo",
+      "family": "Noir",
+      "sourceMood": "reflective",
+      "sourceSeason": "winter",
+      "tags": [
+        "Dusk",
+        "Cool",
+        "High contrast"
+      ],
+      "swatches": [
+        {
+          "name": "Blue Shadow",
+          "hex": "#111C2E"
+        },
+        {
+          "name": "Frost Trace",
+          "hex": "#223E5C"
+        },
+        {
+          "name": "Midnight Ink",
+          "hex": "#8F887E"
+        },
+        {
+          "name": "Moonsteel",
+          "hex": "#A8A197"
+        },
+        {
+          "name": "Smoked Violet",
+          "hex": "#D9D4CC"
+        }
+      ]
+    },
+    {
+      "id": "dusk",
+      "name": "Velvet Dusk",
+      "family": "Dusk",
+      "sourceMood": "calm",
+      "sourceSeason": "autumn",
+      "tags": [
+        "Evening",
+        "Soft",
+        "Grounded"
+      ],
+      "swatches": [
+        {
+          "name": "Cloud Veil",
+          "hex": "#6F3425"
+        },
+        {
+          "name": "Soft Clay",
+          "hex": "#A95832"
+        },
+        {
+          "name": "Dusk Paper",
+          "hex": "#F0D8C2"
+        },
+        {
+          "name": "Velvet Umber",
+          "hex": "#8C8C8C"
+        },
+        {
+          "name": "Quiet Taupe",
+          "hex": "#C4C4C4"
+        }
+      ]
+    },
+    {
+      "id": "jewel",
+      "name": "Cobalt Jewel",
+      "family": "Jewel",
+      "sourceMood": "natural",
+      "sourceSeason": "spring",
+      "tags": [
+        "Cobalt",
+        "Emerald",
+        "Aquamarine"
+      ],
+      "swatches": [
+        {
+          "name": "Sapphire Depth",
+          "hex": "#0F2F74"
+        },
+        {
+          "name": "Cobalt Current",
+          "hex": "#1746A2"
+        },
+        {
+          "name": "Aquamarine Glass",
+          "hex": "#2EC4B6"
+        },
+        {
+          "name": "Emerald Cut",
+          "hex": "#047857"
+        },
+        {
+          "name": "Gilded Glint",
+          "hex": "#D4A72C"
+        }
+      ]
+    },
+    {
+      "id": "indigo-violet",
+      "name": "Indigo Violet Bloom",
+      "family": "Indigo Violet",
+      "sourceMood": "reflective",
+      "sourceSeason": "winter",
+      "tags": [
+        "Indigo",
+        "Violet",
+        "Fuchsia"
+      ],
+      "swatches": [
+        {
+          "name": "Blue Velvet",
+          "hex": "#102A56"
+        },
+        {
+          "name": "Indigo Veil",
+          "hex": "#31266F"
+        },
+        {
+          "name": "Violet Hour",
+          "hex": "#5B2E91"
+        },
+        {
+          "name": "Deep Fuchsia",
+          "hex": "#B31973"
+        },
+        {
+          "name": "Moon Opal",
+          "hex": "#CFCBE3"
+        }
+      ]
+    },
+    {
+      "id": "aquamarine-emerald",
+      "name": "Aquamarine Emerald",
+      "family": "Aquamarine Emerald",
+      "sourceMood": "natural",
+      "sourceSeason": "spring",
+      "tags": [
+        "Aquamarine",
+        "Teal",
+        "Emerald"
+      ],
+      "swatches": [
+        {
+          "name": "Aquamarine Glass",
+          "hex": "#2EC4B6"
+        },
+        {
+          "name": "Peacock Teal",
+          "hex": "#006D77"
+        },
+        {
+          "name": "Emerald Cut",
+          "hex": "#047857"
+        },
+        {
+          "name": "Sapphire Depth",
+          "hex": "#0F2F74"
+        },
+        {
+          "name": "Sea Opal",
+          "hex": "#C7E4DF"
+        }
+      ]
+    },
+    {
+      "id": "sapphire-jet-shimmer",
+      "name": "Sapphire Jet Shimmer",
+      "family": "Sapphire Jet",
+      "sourceMood": "stormy",
+      "sourceSeason": "winter",
+      "tags": [
+        "Sapphire",
+        "Jet",
+        "Shimmer"
+      ],
+      "swatches": [
+        {
+          "name": "Jet Black",
+          "hex": "#08090D"
+        },
+        {
+          "name": "Jet Shimmer",
+          "hex": "#1B1D2A"
+        },
+        {
+          "name": "Sapphire Depth",
+          "hex": "#0F2F74"
+        },
+        {
+          "name": "Bright Sapphire",
+          "hex": "#1F5EFF"
+        },
+        {
+          "name": "White Opal",
+          "hex": "#D8DAD2"
+        }
+      ]
+    },
+    {
+      "id": "ruby-fuchsia",
+      "name": "Ruby Fuchsia Velvet",
+      "family": "Ruby Fuchsia",
+      "sourceMood": "joyful",
+      "sourceSeason": "autumn",
+      "tags": [
+        "Ruby",
+        "Fuchsia",
+        "Garnet"
+      ],
+      "swatches": [
+        {
+          "name": "Garnet Shadow",
+          "hex": "#641220"
+        },
+        {
+          "name": "Ruby Lacquer",
+          "hex": "#A4163A"
+        },
+        {
+          "name": "Deep Fuchsia",
+          "hex": "#B31973"
+        },
+        {
+          "name": "Orchid Flame",
+          "hex": "#D13F8C"
+        },
+        {
+          "name": "Gilded Glint",
+          "hex": "#D4A72C"
+        }
+      ]
+    },
+    {
+      "id": "firelight",
+      "name": "FireLight",
+      "family": "FireLight",
+      "sourceMood": "orbGlow",
+      "sourceSeason": "summer",
+      "tags": [
+        "FireLight",
+        "Ember",
+        "Gold"
+      ],
+      "swatches": [
+        {
+          "name": "Garnet Shadow",
+          "hex": "#641220"
+        },
+        {
+          "name": "Ember Ruby",
+          "hex": "#C9361A"
+        },
+        {
+          "name": "FireLight",
+          "hex": "#FF7A1A"
+        },
+        {
+          "name": "Flame Gold",
+          "hex": "#FFB000"
+        },
+        {
+          "name": "Ember Pearl",
+          "hex": "#F7D4B5"
+        }
+      ]
+    },
+    {
+      "id": "storm",
+      "name": "Storm Jewel",
+      "family": "Storm",
+      "sourceMood": "stormy",
+      "sourceSeason": "winter",
+      "tags": [
+        "Storm",
+        "Jewel",
+        "Atmospheric"
+      ],
+      "swatches": [
+        {
+          "name": "Ice Break",
+          "hex": "#111C2E"
+        },
+        {
+          "name": "Storm Core",
+          "hex": "#4A525C"
+        },
+        {
+          "name": "Slate Surge",
+          "hex": "#6A7480"
+        },
+        {
+          "name": "Rain Blue",
+          "hex": "#8F9AA8"
+        },
+        {
+          "name": "Cloud Metal",
+          "hex": "#B8C0CC"
+        }
+      ]
+    },
+    {
+      "id": "glow",
+      "name": "Orb Afterglow",
+      "family": "Glow",
+      "sourceMood": "orbGlow",
+      "sourceSeason": "summer",
+      "tags": [
+        "Warm",
+        "Radiant",
+        "Soft focus"
+      ],
+      "swatches": [
+        {
+          "name": "Warm Cream",
+          "hex": "#B85F3E"
+        },
+        {
+          "name": "Amber Halo",
+          "hex": "#E9CC6E"
+        },
+        {
+          "name": "Honey Flare",
+          "hex": "#EFD98C"
+        },
+        {
+          "name": "Soft Gold",
+          "hex": "#F4E5AA"
+        },
+        {
+          "name": "Sun Veil",
+          "hex": "#F9EEC6"
+        }
+      ]
+    }
+  ],
+  "impressionistPalettes": [
+    {
+      "id": "water-garden-haze",
+      "name": "Water Garden Haze",
+      "family": "Water Garden",
+      "season": "Spring",
+      "time": "Day",
+      "range": "Impressionist",
+      "tags": [
+        "Water",
+        "Lilac",
+        "Lily"
+      ],
+      "swatches": [
+        {
+          "name": "Water Blue",
+          "hex": "#8DB9D4"
+        },
+        {
+          "name": "Lily Green",
+          "hex": "#A9CFA5"
+        },
+        {
+          "name": "Iris Lilac",
+          "hex": "#B8A7D8"
+        },
+        {
+          "name": "Rose Mist",
+          "hex": "#E9A9B5"
+        },
+        {
+          "name": "Linen Whisper",
+          "hex": "#F1EAD8"
+        }
+      ]
+    },
+    {
+      "id": "rose-lantern",
+      "name": "Rose Lantern",
+      "family": "Rose Lantern",
+      "season": "Summer",
+      "time": "Evening",
+      "range": "Impressionist",
+      "tags": [
+        "Rose",
+        "Peach",
+        "Glow"
+      ],
+      "swatches": [
+        {
+          "name": "Blush Rose",
+          "hex": "#D98292"
+        },
+        {
+          "name": "Peach Light",
+          "hex": "#F2B88F"
+        },
+        {
+          "name": "Butter Glow",
+          "hex": "#F5D77A"
+        },
+        {
+          "name": "Claret Daydream",
+          "hex": "#71324B"
+        },
+        {
+          "name": "Burgundy Murmur",
+          "hex": "#6E3348"
+        }
+      ]
+    },
+    {
+      "id": "lilac-riverlight",
+      "name": "Lilac Riverlight",
+      "family": "Lilac Riverlight",
+      "season": "Winter",
+      "time": "Day",
+      "range": "Impressionist",
+      "tags": [
+        "Lilac",
+        "Cerulean",
+        "Air"
+      ],
+      "swatches": [
+        {
+          "name": "Blue-Violet Wash",
+          "hex": "#7F8BCB"
+        },
+        {
+          "name": "Soft Cerulean",
+          "hex": "#70A9C7"
+        },
+        {
+          "name": "Garden Teal",
+          "hex": "#5FA6A1"
+        },
+        {
+          "name": "Iris Lilac",
+          "hex": "#B8A7D8"
+        },
+        {
+          "name": "Zinc Dawn",
+          "hex": "#EEF4F6"
+        }
+      ]
+    }
+  ],
+  "timeOfDayPalettes": [
+    {
+      "id": "morning-first-light",
+      "name": "Morning — First Light",
+      "season": "Morning",
+      "time": "Morning",
+      "range": "Time of Day",
+      "tags": [
+        "Mist",
+        "Peach",
+        "Awakening"
+      ],
+      "swatches": [
+        {
+          "name": "Dawn Mist",
+          "hex": "#EAF3EF"
+        },
+        {
+          "name": "First Peach",
+          "hex": "#F6C9A8"
+        },
+        {
+          "name": "Pale Apricot",
+          "hex": "#F8DFAF"
+        },
+        {
+          "name": "New Leaf",
+          "hex": "#B9D8AE"
+        },
+        {
+          "name": "Soft Sky",
+          "hex": "#A7CDE0"
+        }
+      ]
+    },
+    {
+      "id": "afternoon-clear-radiance",
+      "name": "Afternoon — Clear Radiance",
+      "season": "Afternoon",
+      "time": "Afternoon",
+      "range": "Time of Day",
+      "tags": [
+        "Clear",
+        "Bright",
+        "Open"
+      ],
+      "swatches": [
+        {
+          "name": "High Sun",
+          "hex": "#F8D66D"
+        },
+        {
+          "name": "Clear Blue",
+          "hex": "#69A9D8"
+        },
+        {
+          "name": "Garden Bright",
+          "hex": "#78BE7C"
+        },
+        {
+          "name": "Warm Stucco",
+          "hex": "#E7B780"
+        },
+        {
+          "name": "Light Shadow",
+          "hex": "#8AA0B2"
+        }
+      ]
+    },
+    {
+      "id": "midnight-deep-quiet",
+      "name": "Midnight — Deep Quiet",
+      "season": "Midnight",
+      "time": "Midnight",
+      "range": "Time of Day",
+      "tags": [
+        "Nocturne",
+        "Moon",
+        "Still"
+      ],
+      "swatches": [
+        {
+          "name": "Midnight Ink",
+          "hex": "#080B18"
+        },
+        {
+          "name": "Blue Black",
+          "hex": "#101B33"
+        },
+        {
+          "name": "Moon Violet",
+          "hex": "#3D315F"
+        },
+        {
+          "name": "Night Teal",
+          "hex": "#0D4C5A"
+        },
+        {
+          "name": "Star Silver",
+          "hex": "#C9D3DF"
+        }
+      ]
+    }
+  ],
+  "weatherDrivenPalettes": [
+    {
+      "id": "sunlit-clear",
+      "name": "Sunlit Clear",
+      "season": "Weather",
+      "time": "Weather",
+      "range": "Weather Driven",
+      "sourceWeather": [
+        "sunny",
+        "clear"
+      ],
+      "sourceMood": "joyful",
+      "tags": [
+        "Sunny",
+        "Clear",
+        "Lifted"
+      ],
+      "swatches": [
+        {
+          "name": "Clear Light",
+          "hex": "#FFE8A3"
+        },
+        {
+          "name": "Sun Warmth",
+          "hex": "#FFD27F"
+        },
+        {
+          "name": "Open Glow",
+          "hex": "#FFBC5A"
+        },
+        {
+          "name": "Bright Edge",
+          "hex": "#FFA533"
+        },
+        {
+          "name": "Solar Pulse",
+          "hex": "#FF8C00"
+        }
+      ]
+    },
+    {
+      "id": "cloud-reflection",
+      "name": "Cloud Reflection",
+      "season": "Weather",
+      "time": "Weather",
+      "range": "Weather Driven",
+      "sourceWeather": [
+        "cloudy",
+        "fog"
+      ],
+      "sourceMood": "reflective",
+      "tags": [
+        "Cloud",
+        "Fog",
+        "Soft"
+      ],
+      "swatches": [
+        {
+          "name": "Cloud Paper",
+          "hex": "#F2EFEA"
+        },
+        {
+          "name": "Mist Stone",
+          "hex": "#D9D4CC"
+        },
+        {
+          "name": "Quiet Taupe",
+          "hex": "#C1BBB2"
+        },
+        {
+          "name": "Fog Shadow",
+          "hex": "#A8A197"
+        },
+        {
+          "name": "Deep Haze",
+          "hex": "#8F887E"
+        }
+      ]
+    },
+    {
+      "id": "rainstorm-depth",
+      "name": "Rainstorm Depth",
+      "season": "Weather",
+      "time": "Weather",
+      "range": "Weather Driven",
+      "sourceWeather": [
+        "rain",
+        "heavy_rain",
+        "storm"
+      ],
+      "sourceMood": "stormy",
+      "tags": [
+        "Rain",
+        "Storm",
+        "Depth"
+      ],
+      "swatches": [
+        {
+          "name": "Rain Glass",
+          "hex": "#DDE1E6"
+        },
+        {
+          "name": "Storm Blue",
+          "hex": "#B8C0CC"
+        },
+        {
+          "name": "Cloud Metal",
+          "hex": "#8F9AA8"
+        },
+        {
+          "name": "Wet Slate",
+          "hex": "#6A7480"
+        },
+        {
+          "name": "Storm Core",
+          "hex": "#4A525C"
+        }
+      ]
+    },
+    {
+      "id": "wind-natural",
+      "name": "Wind Natural",
+      "season": "Weather",
+      "time": "Weather",
+      "range": "Weather Driven",
+      "sourceWeather": [
+        "partly_cloudy",
+        "wind"
+      ],
+      "sourceMood": "natural",
+      "tags": [
+        "Wind",
+        "Leaf",
+        "Moving"
+      ],
+      "swatches": [
+        {
+          "name": "Air Leaf",
+          "hex": "#E8F0E5"
+        },
+        {
+          "name": "Moving Green",
+          "hex": "#CDE0C9"
+        },
+        {
+          "name": "Field Light",
+          "hex": "#B2D0AD"
+        },
+        {
+          "name": "Wind Grove",
+          "hex": "#8FB88A"
+        },
+        {
+          "name": "Deep Leaf",
+          "hex": "#6A9F66"
+        }
+      ]
+    },
+    {
+      "id": "snow-quiet",
+      "name": "Snow Quiet",
+      "season": "Weather",
+      "time": "Weather",
+      "range": "Weather Driven",
+      "sourceWeather": [
+        "snow"
+      ],
+      "sourceMood": "winter",
+      "tags": [
+        "Snow",
+        "Ice",
+        "Still"
+      ],
+      "swatches": [
+        {
+          "name": "Snow Light",
+          "hex": "#DCEAF7"
+        },
+        {
+          "name": "Blue Steel",
+          "hex": "#9FBAD4"
+        },
+        {
+          "name": "Frost Blue",
+          "hex": "#517BA6"
+        },
+        {
+          "name": "Moonlit Depth",
+          "hex": "#223E5C"
+        },
+        {
+          "name": "Winter Ink",
+          "hex": "#111C2E"
+        }
+      ]
+    }
+  ],
+  "weatherAtmospheres": [
+    {
+      "id": "clear-bloom",
+      "name": "Clear Bloom",
+      "description": "A bright atmospheric lift for clear or sunny conditions.",
+      "sourceWeather": [
+        "sunny",
+        "clear"
+      ],
+      "filter": "saturate(1.08) brightness(1.05)",
+      "tint": "#FFE8A3"
+    },
+    {
+      "id": "rainwashed-depth",
+      "name": "Rainwashed Depth",
+      "description": "A cooler softened tint for rain, storm, and wet light.",
+      "sourceWeather": [
+        "rain",
+        "heavy_rain",
+        "storm"
+      ],
+      "filter": "saturate(0.94) hue-rotate(8deg) brightness(0.97)",
+      "tint": "#B8C0CC"
+    },
+    {
+      "id": "fog-veil",
+      "name": "Fog Veil",
+      "description": "A low-contrast veil for cloudy, foggy, and reflective scenes.",
+      "sourceWeather": [
+        "cloudy",
+        "fog"
+      ],
+      "filter": "saturate(0.9) brightness(1.03)",
+      "tint": "#D9D4CC"
+    },
+    {
+      "id": "snow-glow",
+      "name": "Snow Glow",
+      "description": "A cool luminous lift for snow and winter stillness.",
+      "sourceWeather": [
+        "snow"
+      ],
+      "filter": "saturate(0.96) brightness(1.06)",
+      "tint": "#DCEAF7"
+    }
+  ],
+  "jewelToneSwatches": {
+    "cobalt": {
+      "name": "Cobalt Current",
+      "hex": "#1746A2"
+    },
+    "sapphire": {
+      "name": "Sapphire Depth",
+      "hex": "#0F2F74"
+    },
+    "brightSapphire": {
+      "name": "Bright Sapphire",
+      "hex": "#1F5EFF"
+    },
+    "deepBlue": {
+      "name": "Blue Velvet",
+      "hex": "#102A56"
+    },
+    "indigo": {
+      "name": "Indigo Veil",
+      "hex": "#31266F"
+    },
+    "violet": {
+      "name": "Violet Hour",
+      "hex": "#5B2E91"
+    },
+    "fuchsia": {
+      "name": "Deep Fuchsia",
+      "hex": "#B31973"
+    },
+    "magenta": {
+      "name": "Orchid Flame",
+      "hex": "#D13F8C"
+    },
+    "aquamarine": {
+      "name": "Aquamarine Glass",
+      "hex": "#2EC4B6"
+    },
+    "teal": {
+      "name": "Peacock Teal",
+      "hex": "#006D77"
+    },
+    "emerald": {
+      "name": "Emerald Cut",
+      "hex": "#047857"
+    },
+    "ruby": {
+      "name": "Ruby Lacquer",
+      "hex": "#A4163A"
+    },
+    "garnet": {
+      "name": "Garnet Shadow",
+      "hex": "#641220"
+    },
+    "jet": {
+      "name": "Jet Black",
+      "hex": "#08090D"
+    },
+    "jetShimmer": {
+      "name": "Jet Shimmer",
+      "hex": "#1B1D2A"
+    },
+    "firelight": {
+      "name": "FireLight",
+      "hex": "#FF7A1A"
+    },
+    "ember": {
+      "name": "Ember Ruby",
+      "hex": "#C9361A"
+    },
+    "flameGold": {
+      "name": "Flame Gold",
+      "hex": "#FFB000"
+    },
+    "gold": {
+      "name": "Gilded Glint",
+      "hex": "#D4A72C"
+    },
+    "pearl": {
+      "name": "Pearl Lift",
+      "hex": "#F3E8D2"
+    },
+    "whiteOpal": {
+      "name": "White Opal",
+      "hex": "#D8DAD2"
+    },
+    "moonOpal": {
+      "name": "Moon Opal",
+      "hex": "#CFCBE3"
+    },
+    "seaOpal": {
+      "name": "Sea Opal",
+      "hex": "#C7E4DF"
+    },
+    "emberPearl": {
+      "name": "Ember Pearl",
+      "hex": "#F7D4B5"
+    }
+  },
+  "blendedToneSwatches": {
+    "waterBlue": {
+      "name": "Water Blue",
+      "hex": "#8DB9D4"
+    },
+    "lilyGreen": {
+      "name": "Lily Green",
+      "hex": "#A9CFA5"
+    },
+    "irisLilac": {
+      "name": "Iris Lilac",
+      "hex": "#B8A7D8"
+    },
+    "roseMist": {
+      "name": "Rose Mist",
+      "hex": "#E9A9B5"
+    },
+    "peachLight": {
+      "name": "Peach Light",
+      "hex": "#F2B88F"
+    },
+    "butterGlow": {
+      "name": "Butter Glow",
+      "hex": "#F5D77A"
+    },
+    "mauveShadow": {
+      "name": "Mauve Shadow",
+      "hex": "#8D7298"
+    },
+    "softCerulean": {
+      "name": "Soft Cerulean",
+      "hex": "#70A9C7"
+    },
+    "gardenTeal": {
+      "name": "Garden Teal",
+      "hex": "#5FA6A1"
+    },
+    "blushRose": {
+      "name": "Blush Rose",
+      "hex": "#D98292"
+    },
+    "creamCanvas": {
+      "name": "Cream Canvas",
+      "hex": "#F5E8CF"
+    },
+    "linenWhisper": {
+      "name": "Linen Whisper",
+      "hex": "#F1EAD8"
+    },
+    "zincDawn": {
+      "name": "Zinc Dawn",
+      "hex": "#EEF4F6"
+    },
+    "claretDaydream": {
+      "name": "Claret Daydream",
+      "hex": "#71324B"
+    },
+    "burgundyMurmur": {
+      "name": "Burgundy Murmur",
+      "hex": "#6E3348"
+    },
+    "blueVioletWash": {
+      "name": "Blue-Violet Wash",
+      "hex": "#7F8BCB"
+    }
+  },
+  "impressionistFamilies": [
+    {
+      "id": "water-garden-haze",
+      "title": "Water Garden",
+      "description": "Soft water, lily green, and lilac shadow in a luminous blend.",
+      "season": "Spring",
+      "time": "Day",
+      "name": "Water Garden Haze",
+      "tags": [
+        "Water",
+        "Lilac",
+        "Lily"
+      ]
+    },
+    {
+      "id": "rose-lantern",
+      "title": "Rose Lantern",
+      "description": "Rose, peach, and warm cream for a brushed evening glow.",
+      "season": "Summer",
+      "time": "Evening",
+      "name": "Rose Lantern",
+      "tags": [
+        "Rose",
+        "Peach",
+        "Glow"
+      ]
+    },
+    {
+      "id": "lilac-riverlight",
+      "title": "Lilac Riverlight",
+      "description": "Blue-violet wash, cerulean, and green for airy colour movement.",
+      "season": "Winter",
+      "time": "Day",
+      "name": "Lilac Riverlight",
+      "tags": [
+        "Lilac",
+        "Cerulean",
+        "Air"
+      ]
+    }
+  ],
+  "cinematicFamilies": [
+    {
+      "id": "noir",
+      "title": "Noir",
+      "description": "Deep, cool, high-contrast tones.",
+      "mood": "reflective",
+      "season": "winter",
+      "name": "Noir Indigo",
+      "tags": [
+        "Dusk",
+        "Cool",
+        "High contrast"
+      ]
+    },
+    {
+      "id": "dusk",
+      "title": "Dusk",
+      "description": "Soft, evening light with gentle contrast.",
+      "mood": "calm",
+      "season": "autumn",
+      "name": "Velvet Dusk",
+      "tags": [
+        "Evening",
+        "Soft",
+        "Grounded"
+      ]
+    },
+    {
+      "id": "jewel",
+      "title": "Jewel",
+      "description": "Rich gemstone colour with a luminous feel.",
+      "mood": "natural",
+      "season": "spring",
+      "name": "Cobalt Jewel",
+      "tags": [
+        "Cobalt",
+        "Emerald",
+        "Aquamarine"
+      ]
+    },
+    {
+      "id": "indigo-violet",
+      "title": "Indigo Violet",
+      "description": "Blue-violet depth with a bright fuchsia pulse.",
+      "mood": "reflective",
+      "season": "winter",
+      "name": "Indigo Violet Bloom",
+      "tags": [
+        "Indigo",
+        "Violet",
+        "Fuchsia"
+      ]
+    },
+    {
+      "id": "aquamarine-emerald",
+      "title": "Aquamarine Emerald",
+      "description": "Clear water-light, peacock teal, and deep green shine.",
+      "mood": "natural",
+      "season": "spring",
+      "name": "Aquamarine Emerald",
+      "tags": [
+        "Aquamarine",
+        "Teal",
+        "Emerald"
+      ]
+    },
+    {
+      "id": "sapphire-jet-shimmer",
+      "title": "Sapphire Jet",
+      "description": "Sapphire blues against polished black shimmer.",
+      "mood": "stormy",
+      "season": "winter",
+      "name": "Sapphire Jet Shimmer",
+      "tags": [
+        "Sapphire",
+        "Jet",
+        "Shimmer"
+      ]
+    },
+    {
+      "id": "ruby-fuchsia",
+      "title": "Ruby Fuchsia",
+      "description": "Deep pink-red intensity with cinematic shadow.",
+      "mood": "joyful",
+      "season": "autumn",
+      "name": "Ruby Fuchsia Velvet",
+      "tags": [
+        "Ruby",
+        "Fuchsia",
+        "Garnet"
+      ]
+    },
+    {
+      "id": "firelight",
+      "title": "FireLight",
+      "description": "Ember, flame, and gold for warm cinematic glow.",
+      "mood": "orbGlow",
+      "season": "summer",
+      "name": "FireLight",
+      "tags": [
+        "FireLight",
+        "Ember",
+        "Gold"
+      ]
+    },
+    {
+      "id": "storm",
+      "title": "Storm",
+      "description": "Weathered, moody palettes with depth.",
+      "mood": "stormy",
+      "season": "winter",
+      "name": "Storm Jewel",
+      "tags": [
+        "Storm",
+        "Jewel",
+        "Atmospheric"
+      ]
+    },
+    {
+      "id": "glow",
+      "title": "Glow",
+      "description": "Warm highlights and soft radiance.",
+      "mood": "orbGlow",
+      "season": "summer",
+      "name": "Orb Afterglow",
+      "tags": [
+        "Warm",
+        "Radiant",
+        "Soft focus"
+      ]
+    }
+  ],
+  "weatherToMood": {
+    "sunny": "joyful",
+    "clear": "calm",
+    "partly_cloudy": "natural",
+    "cloudy": "reflective",
+    "rain": "stormy",
+    "heavy_rain": "stormy",
+    "snow": "winter",
+    "fog": "reflective",
+    "wind": "natural",
+    "storm": "stormy"
+  },
+  "groups": [
+    {
+      "title": "Seasons",
+      "items": [
+        "spring",
+        "summer",
+        "autumn",
+        "winter"
+      ]
+    },
+    {
+      "title": "Core Moods",
+      "items": [
+        "calm",
+        "joyful",
+        "stormy",
+        "reflective",
+        "natural"
+      ]
+    },
+    {
+      "title": "Special",
+      "items": [
+        "orbGlow"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "seasons": {
+    "spring": {
+      "name": "Spring — Soft Renewal",
+      "palette": {
+        "primary": "#DDF5D7",
+        "secondary": "#B7E3C1",
+        "accent": "#69C58F",
+        "shadow": "#3E8F68",
+        "text": "#213F35"
+      }
+    },
+    "summer": {
+      "name": "Summer — Quiet Warmth",
+      "palette": {
+        "primary": "#FFF0C8",
+        "secondary": "#F7C77E",
+        "accent": "#F28B5B",
+        "shadow": "#B85F3E",
+        "text": "#3F251C"
+      }
+    },
+    "autumn": {
+      "name": "Autumn — Velvet Dusk",
+      "palette": {
+        "primary": "#F0D8C2",
+        "secondary": "#D49A66",
+        "accent": "#A95832",
+        "shadow": "#6F3425",
+        "text": "#2F1D18"
+      }
+    },
+    "winter": {
+      "name": "Winter — Moonlit Quiet",
+      "palette": {
+        "primary": "#DCEAF7",
+        "secondary": "#9FBAD4",
+        "accent": "#517BA6",
+        "shadow": "#223E5C",
+        "text": "#111C2E"
+      }
+    }
+  },
+
+  "moods": {
+    "calm": {
+      "label": "Calm — Studio Neutral",
+      "swatches": ["#EDEDED", "#D9D9D9", "#C4C4C4", "#AFAFAF", "#8C8C8C"]
+    },
+    "joyful": {
+      "label": "Joyful",
+      "swatches": ["#FFE8A3", "#FFD27F", "#FFBC5A", "#FFA533", "#FF8C00"]
+    },
+    "stormy": {
+      "label": "Stormy",
+      "swatches": ["#DDE1E6", "#B8C0CC", "#8F9AA8", "#6A7480", "#4A525C"]
+    },
+    "reflective": {
+      "label": "Reflective",
+      "swatches": ["#F2EFEA", "#D9D4CC", "#C1BBB2", "#A8A197", "#8F887E"]
+    },
+    "natural": {
+      "label": "Natural",
+      "swatches": ["#E8F0E5", "#CDE0C9", "#B2D0AD", "#8FB88A", "#6A9F66"]
+    },
+    "orbGlow": {
+      "label": "Reflections — Orb Glow",
+      "swatches": ["#FDF7E3", "#F9EEC6", "#F4E5AA", "#EFD98C", "#E9CC6E"]
+    }
+  },
+
+  "weatherToMood": {
+    "sunny": "joyful",
+    "clear": "calm",
+    "partly_cloudy": "natural",
+    "cloudy": "reflective",
+    "rain": "stormy",
+    "heavy_rain": "stormy",
+    "snow": "winter",
+    "fog": "reflective",
+    "wind": "natural",
+    "storm": "stormy"
+  },
+
+  "moodBoardMap": {
+    "groups": [
+      {
+        "title": "Seasons",
+        "items": ["spring", "summer", "autumn", "winter"]
+      },
+      {
+        "title": "Core Moods",
+        "items": ["calm", "joyful", "stormy", "reflective", "natural"]
+      },
+      {
+        "title": "Special",
+        "items": ["orbGlow"]
+      }
+    ]
+  }
+}

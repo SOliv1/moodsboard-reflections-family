@@ -1,0 +1,256 @@
+/* src/components/MoodsboardAbout.css */
+
+.moodsboard-about {
+    --about-border: rgba(86, 68, 54, 0.14);
+    --about-shadow: rgba(52, 38, 24, 0.14);
+    --about-paper: rgba(249, 245, 238, 0.8);
+    --about-caption: #736558;
+    --about-title: #2c2622;
+    --about-copy: #4d433b;
+    --about-parallax: 0px;
+    margin: 2rem 0 0;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.54);
+    border-radius: 28px;
+    background:
+        radial-gradient(circle at top left, rgba(255, 244, 220, 0.78), transparent 32%),
+        linear-gradient(180deg, rgba(255, 251, 246, 0.88), rgba(242, 234, 223, 0.82));
+    box-shadow: 0 24px 40px -30px var(--about-shadow);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.moodsboard-about__intro {
+    max-width: 42rem;
+    margin: 0 auto 1.5rem;
+    text-align: center;
+}
+
+.moodsboard-about__eyebrow {
+    margin: 0 0 0.5rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--about-caption);
+}
+
+.moodsboard-about__intro h2 {
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: 0.03em;
+    color: var(--about-title);
+}
+
+.moodsboard-about__tagline {
+    margin: 0.8rem 0 0;
+    font-size: clamp(1rem, 1.8vw, 1.2rem);
+    line-height: 1.7;
+    color: var(--about-copy);
+}
+
+.moodsboard-about__family-row {
+    display: grid;
+    grid-template-columns: minmax(11rem, 1.2fr) repeat(3, minmax(0, 1fr));
+    align-items: center;
+    gap: 0.75rem 1rem;
+    margin: 0 auto 2rem;
+    padding: 0.9rem 0 0.95rem;
+    border-top: 1px solid var(--about-border);
+    border-bottom: 1px solid var(--about-border);
+    color: var(--about-caption);
+}
+
+.moodsboard-about__family-row span {
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.moodsboard-about__family-label {
+    justify-self: start;
+}
+
+.moodsboard-about__family-item {
+    justify-self: center;
+    padding: 0.35rem 0.6rem;
+    border-radius: 999px;
+    border: 1px solid rgba(115, 101, 88, 0.12);
+    background: rgba(255, 255, 255, 0.34);
+}
+
+.moodsboard-about__grid {
+    display: grid;
+    grid-template-columns: minmax(280px, 0.95fr) minmax(0, 1.15fr);
+    gap: 2.2rem;
+    align-items: start;
+}
+
+.moodsboard-about__images {
+    display: grid;
+    gap: 1.1rem;
+}
+
+.moodsboard-about__image-block {
+    margin: 0;
+    padding: 0.7rem;
+    border: 1px solid rgba(255, 255, 255, 0.56);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.54);
+    box-shadow: 0 20px 34px -28px var(--about-shadow);
+    opacity: 0;
+    animation: moodsboard-about-fade-in 900ms ease forwards;
+}
+
+.moodsboard-about__image-block:nth-child(1) {
+    animation-delay: 120ms;
+}
+
+.moodsboard-about__image-block:nth-child(2) {
+    animation-delay: 260ms;
+}
+
+.moodsboard-about__image-block:nth-child(3) {
+    animation-delay: 400ms;
+}
+
+.moodsboard-about__image-block img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.moodsboard-about__image-block figcaption {
+    margin-top: 0.7rem;
+    font-size: 0.76rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--about-caption);
+}
+
+.moodsboard-about__content {
+    transform: translateY(var(--about-parallax));
+    transition: transform 280ms ease-out;
+    will-change: transform;
+}
+
+.moodsboard-about__section {
+    padding: 1.2rem 1.35rem;
+    border: 1px solid var(--about-border);
+    border-radius: 20px;
+    background: var(--about-paper);
+    box-shadow: 0 14px 28px -24px var(--about-shadow);
+}
+
+.moodsboard-about__section+.moodsboard-about__section {
+    margin-top: 0.85rem;
+}
+
+.moodsboard-about__section h3 {
+    margin: 0 0 0.45rem;
+    font-size: 0.94rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--about-caption);
+}
+
+.moodsboard-about__section p,
+.moodsboard-about__section li {
+    margin: 0;
+    font-size: 0.98rem;
+    line-height: 1.72;
+    color: var(--about-copy);
+}
+
+.moodsboard-about__section ul {
+    margin: 0;
+    padding-left: 1.15rem;
+}
+
+.moodsboard-about__section li+li {
+    margin-top: 0.35rem;
+}
+
+@keyframes moodsboard-about-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 900px) {
+    .moodsboard-about {
+        padding: 1.15rem;
+        border-radius: 22px;
+    }
+
+    .moodsboard-about__intro {
+        margin-bottom: 1rem;
+        text-align: left;
+    }
+
+    .moodsboard-about__family-row {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.55rem;
+        padding: 0.7rem 0 0.8rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .moodsboard-about__family-label {
+        grid-column: 1 / -1;
+        justify-self: start;
+        margin-bottom: 0.15rem;
+    }
+
+    .moodsboard-about__family-item {
+        justify-self: stretch;
+        padding: 0.5rem 0.4rem;
+        text-align: center;
+        font-size: 0.72rem;
+        letter-spacing: 0.12em;
+    }
+
+    .moodsboard-about__grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .moodsboard-about__images {
+        gap: 0.8rem;
+    }
+
+    .moodsboard-about__image-block {
+        padding: 0.55rem;
+        border-radius: 18px;
+    }
+
+    .moodsboard-about__image-block img {
+        aspect-ratio: 16 / 11;
+    }
+
+    .moodsboard-about__content {
+        transform: none;
+    }
+
+    .moodsboard-about__section {
+        padding: 1rem 1rem 1.05rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .moodsboard-about__image-block {
+        opacity: 1;
+        animation: none;
+    }
+
+    .moodsboard-about__content {
+        transition: none;
+        transform: none;
+    }
+}

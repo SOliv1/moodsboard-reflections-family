@@ -5,11 +5,11 @@ export const moods = [
     season: "Spring",
     time: "Day",
     palette: [
-      { name: "Mist Green", hex: "#DFF3EA" },
-      { name: "Pale Jade", hex: "#A8DCC0" },
-      { name: "Warm Gold", hex: "#F4D79B" },
-      { name: "Soft White", hex: "#F9F9F6" },
-      { name: "Dew Grey", hex: "#E3E8E5" }
+      { name: "Leaf Light", hex: "#DDF5D7" },
+      { name: "Fresh Jade", hex: "#B7E3C1" },
+      { name: "Spring Sap", hex: "#69C58F" },
+      { name: "Moss Shadow", hex: "#3E8F68" },
+      { name: "Garden Ink", hex: "#213F35" }
     ]
   },
   {
@@ -18,11 +18,11 @@ export const moods = [
     season: "Summer",
     time: "Day",
     palette: [
-      { name: "Soft Citrus", hex: "#F7E7C2" },
-      { name: "Pale Coral", hex: "#F4C7A1" },
-      { name: "Warm Sand", hex: "#E8D5B7" },
-      { name: "Leaf Green", hex: "#C9D9B0" },
-      { name: "Sun Haze", hex: "#F5EEDC" }
+      { name: "Sun Cream", hex: "#FFF0C8" },
+      { name: "Apricot Light", hex: "#F7C77E" },
+      { name: "Coral Heat", hex: "#F28B5B" },
+      { name: "Terracotta Shade", hex: "#B85F3E" },
+      { name: "Warm Umber", hex: "#3F251C" }
     ]
   },
   {
@@ -31,11 +31,11 @@ export const moods = [
     season: "Autumn",
     time: "Evening",
     palette: [
-      { name: "Burnt Umber", hex: "#8A5A3B" },
-      { name: "Soft Rust", hex: "#C27A5A" },
-      { name: "Warm Brown", hex: "#A67C58" },
-      { name: "Dusk Gold", hex: "#D8B47A" },
-      { name: "Shadow Clay", hex: "#7A6655" }
+      { name: "Harvest Blush", hex: "#F0D8C2" },
+      { name: "Copper Leaf", hex: "#D49A66" },
+      { name: "Burnished Rust", hex: "#A95832" },
+      { name: "Chestnut Shadow", hex: "#6F3425" },
+      { name: "Dusk Bark", hex: "#2F1D18" }
     ]
   },
   {
@@ -44,11 +44,11 @@ export const moods = [
     season: "Winter",
     time: "Evening",
     palette: [
-      { name: "Moonlit Navy", hex: "#1E2A38" },
-      { name: "Soft Steel", hex: "#6F7C89" },
-      { name: "Ice Silver", hex: "#DDE3E8" },
-      { name: "Deep Blue", hex: "#0F1C2E" },
-      { name: "Faint Silver", hex: "#E8EEF2" }
+      { name: "Glacier Light", hex: "#DCEAF7" },
+      { name: "Blue Steel", hex: "#9FBAD4" },
+      { name: "Frost Blue", hex: "#517BA6" },
+      { name: "Moonlit Depth", hex: "#223E5C" },
+      { name: "Winter Ink", hex: "#111C2E" }
     ]
   },
   {

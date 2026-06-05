@@ -5,6 +5,7 @@
   "scripts": {
     "start": "vite",
     "dev": "vite",
+    "export:moodboard": "node scripts/exportMoodboard.js",
     "build": "vite build",
     "preview": "vite preview"
   },
@@ -22,7 +23,8 @@
   "homepage": "https://github.com/SOliv1/other-traversing-methods#readme",
   "dependencies": {
     "react": "^19.2.7",
-    "react-dom": "^19.2.7"
+    "react-dom": "^19.2.7",
+    "react-router-dom": "^7.17.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^6.0.2",

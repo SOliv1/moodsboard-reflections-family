@@ -1,5 +1,8 @@
 # Reflections Family Moods Board App
 
+[![Live site](https://img.shields.io/website?url=https%3A%2F%2Fsoliv1.github.io%2Fmoodsboard-reflections-family%2F&label=live%20site)](https://soliv1.github.io/moodsboard-reflections-family/)
+[![Deploy to GitHub Pages](https://github.com/SOliv1/moodsboard-reflections-family/actions/workflows/deploy.yml/badge.svg)](https://github.com/SOliv1/moodsboard-reflections-family/actions/workflows/deploy.yml)
+
 React + Vite starter for a seasonal and cinematic mood board.
 
 Live site:

@@ -9,6 +9,10 @@ npm install
 npm run dev
 ```
 
+```bash
+npm install -D vite-plugin-pwa sharp
+```
+
 ## Build for production
 
 ```bash

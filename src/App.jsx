@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 import { moods } from './data/data.jsx';
 import {
@@ -259,14 +259,47 @@ function AboutPage() {
   );
 }
 
-function App() {
+function StartupSplash() {
   return (
-    <Routes>
-      <Route path="/" element={<MoodsBoardPage />} />
-      <Route path="/home" element={<MoodsBoardPage />} />
-      <Route path="/about" element={<AboutPage />} />
-      <Route path="/moodsboard-cinematic" element={<CinematicMoodsBoardPage />} />
-    </Routes>
+    <div className="startup-splash" aria-hidden="true">
+      <div className="startup-splash__veil" />
+      <div className="startup-splash__content">
+        <img
+          className="startup-splash__orb"
+          src={`${import.meta.env.BASE_URL}pwa/icon-512.png`}
+          alt=""
+        />
+        <p className="startup-splash__eyebrow">Reflections Family</p>
+        <h2 className="startup-splash__title">Moods Board</h2>
+        <p className="startup-splash__text">Seasonal palettes tuned for a mobile-first experience.</p>
+      </div>
+    </div>
+  );
+}
+
+function App() {
+  const [showSplash, setShowSplash] = useState(true);
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      setShowSplash(false);
+    }, 1800);
+
+    return () => {
+      window.clearTimeout(timer);
+    };
+  }, []);
+
+  return (
+    <>
+      {showSplash ? <StartupSplash /> : null}
+      <Routes>
+        <Route path="/" element={<MoodsBoardPage />} />
+        <Route path="/home" element={<MoodsBoardPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/moodsboard-cinematic" element={<CinematicMoodsBoardPage />} />
+      </Routes>
+    </>
   );
 }
 

@@ -6,6 +6,8 @@
     "start": "vite",
     "dev": "vite",
     "export:moodboard": "node scripts/exportMoodboard.js",
+    "generate:pwa-assets": "node scripts/generatePwaAssets.mjs",
+    "prebuild": "npm run generate:pwa-assets",
     "build": "vite build",
     "preview": "vite preview"
   },
@@ -28,6 +30,8 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^6.0.2",
-    "vite": "^8.0.16"
+    "sharp": "^0.34.5",
+    "vite": "^8.0.16",
+    "vite-plugin-pwa": "^1.3.0"
   }
 }

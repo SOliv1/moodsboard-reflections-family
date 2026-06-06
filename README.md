@@ -2,7 +2,8 @@
 
 [![Live site](https://img.shields.io/website?url=https%3A%2F%2Fsoliv1.github.io%2Fmoodsboard-reflections-family%2F&label=live%20site)](https://soliv1.github.io/moodsboard-reflections-family/)
 [![Deploy to GitHub Pages](https://github.com/SOliv1/moodsboard-reflections-family/actions/workflows/deploy.yml/badge.svg)](https://github.com/SOliv1/moodsboard-reflections-family/actions/workflows/deploy.yml)
-[![PWA ready](https://img.shields.io/badge/PWA-ready-f6efe4?labelColor=bc6c25&color=dda15e)](https://soliv1.github.io/moodsboard-reflections-family/)
+[![PWA ready](https://img.shields.io/badge/PWA-ready-2ea44f?labelColor=1f6f3b&color=2ea44f)](https://soliv1.github.io/moodsboard-reflections-family/)
+[![Orb palette](https://img.shields.io/badge/orb-palette-95cdee?labelColor=517ba6&color=95cdee)](https://soliv1.github.io/moodsboard-reflections-family/)
 
 React + Vite starter for a seasonal and cinematic mood board.
 

@@ -2,6 +2,12 @@
 
 React + Vite starter for a seasonal and cinematic mood board.
 
+Live site:
+
+```text
+https://soliv1.github.io/moodsboard-reflections-family/
+```
+
 ## Run locally
 
 ```bash
@@ -9,8 +15,19 @@ npm install
 npm run dev
 ```
 
+## PWA assets
+
+The mobile install icons and Apple startup images are generated from the orb logo source in `public/impressionist-orb-identity-upscaled.png`.
+
 ```bash
-npm install -D vite-plugin-pwa sharp
+npm run generate:pwa-assets
+```
+
+Generated files are written to:
+
+```text
+public/pwa/
+public/pwa/apple-splash/
 ```
 
 ## Build for production
@@ -18,6 +35,16 @@ npm install -D vite-plugin-pwa sharp
 ```bash
 npm run build
 npm run preview
+```
+
+`npm run build` runs the PWA asset generator first, then creates the production bundle, manifest, and service worker.
+
+## Deploy
+
+Pushes to `master` trigger the GitHub Pages workflow in `.github/workflows/deploy.yml`.
+
+```bash
+git push origin master
 ```
 
 ## Moodboard Export

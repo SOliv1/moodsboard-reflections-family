@@ -12,17 +12,17 @@ const pwaDir = path.join(publicDir, 'pwa');
 const splashDir = path.join(pwaDir, 'apple-splash');
 
 const iconSpecs = [
-  { filename: 'favicon-16x16.png', width: 16, height: 16, orbScale: 0.68 },
-  { filename: 'favicon-32x32.png', width: 32, height: 32, orbScale: 0.68 },
-  { filename: 'icon-192.png', width: 192, height: 192, orbScale: 0.7 },
-  { filename: 'icon-256.png', width: 256, height: 256, orbScale: 0.7 },
-  { filename: 'icon-384.png', width: 384, height: 384, orbScale: 0.7 },
-  { filename: 'icon-512.png', width: 512, height: 512, orbScale: 0.7 },
-  { filename: 'icon-maskable-512.png', width: 512, height: 512, orbScale: 0.58 },
-  { filename: 'icon-maskable-1024.png', width: 1024, height: 1024, orbScale: 0.58 },
-  { filename: 'apple-touch-icon-152.png', width: 152, height: 152, orbScale: 0.66 },
-  { filename: 'apple-touch-icon-167.png', width: 167, height: 167, orbScale: 0.66 },
-  { filename: 'apple-touch-icon-180.png', width: 180, height: 180, orbScale: 0.66 }
+  { filename: 'favicon-16x16.png', width: 16, height: 16, orbScale: 0.74 },
+  { filename: 'favicon-32x32.png', width: 32, height: 32, orbScale: 0.74 },
+  { filename: 'icon-192.png', width: 192, height: 192, orbScale: 0.78 },
+  { filename: 'icon-256.png', width: 256, height: 256, orbScale: 0.78 },
+  { filename: 'icon-384.png', width: 384, height: 384, orbScale: 0.78 },
+  { filename: 'icon-512.png', width: 512, height: 512, orbScale: 0.78 },
+  { filename: 'icon-maskable-512.png', width: 512, height: 512, orbScale: 0.68 },
+  { filename: 'icon-maskable-1024.png', width: 1024, height: 1024, orbScale: 0.68 },
+  { filename: 'apple-touch-icon-152.png', width: 152, height: 152, orbScale: 0.76 },
+  { filename: 'apple-touch-icon-167.png', width: 167, height: 167, orbScale: 0.76 },
+  { filename: 'apple-touch-icon-180.png', width: 180, height: 180, orbScale: 0.76 }
 ];
 
 const splashSpecs = [
@@ -86,7 +86,7 @@ async function renderComposite({ filename, width, height, orbScale, directory, m
     .png()
     .toBuffer();
 
-  const top = Math.round((height - orbSize) * (mode === 'splash' ? 0.42 : 0.5));
+  const top = Math.round((height - orbSize) * (mode === 'splash' ? 0.42 : 0.44));
   const left = Math.round((width - orbSize) / 2);
 
   await sharp(makeBackdropSvg(width, height, mode))

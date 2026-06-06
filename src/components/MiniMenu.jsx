@@ -4,6 +4,8 @@ const menuItems = [
   ['/', 'Home'],
   ['/about', 'About'],
   ['/moodsboard-cinematic', 'Cinematic'],
+  ['/moodsboard-intro', 'Intro'],
+  ['/moodsboard-typography', 'Typography'],
 ];
 
 function MiniMenu() {

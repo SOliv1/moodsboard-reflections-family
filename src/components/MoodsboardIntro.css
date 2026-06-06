@@ -1,0 +1,626 @@
+/* ============================================================
+   MoodsboardHero
+   ============================================================ */
+
+.moodsboard-hero {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 18px;
+    margin: 1rem 0 2rem;
+    background: rgba(10, 8, 18, 0.2);
+}
+
+.moodsboard-hero__image {
+    width: 100%;
+    height: auto;
+    object-fit: initial;
+    object-position: center;
+    display: block;
+    transition: transform 6s ease;
+}
+
+.moodsboard-hero:hover .moodsboard-hero__image {
+    transform: scale(1.03);
+}
+
+.moodsboard-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            rgba(10, 8, 18, 0.08) 0%,
+            rgba(10, 8, 18, 0.35) 72%,
+            rgba(10, 8, 18, 0.62) 100%);
+}
+
+.moodsboard-hero__grain {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+    border-radius: inherit;
+}
+
+.moodsboard-hero__content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1.5rem 2rem;
+    gap: 0.4rem;
+    z-index: 3;
+}
+
+.moodsboard-hero__eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(220, 210, 255, 0.75);
+    margin: 0 0 0.35rem;
+}
+
+.moodsboard-hero__title {
+    font-size: clamp(1.6rem, 4vw, 2.6rem);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #f8f6ff;
+    margin: 0 0 0.25rem;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 900px) {
+    .moodsboard-hero {
+        margin: 1rem 0 1.75rem;
+    }
+}
+
+.moodsboard-hero__label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(196, 175, 255, 0.9);
+    margin: 0 0 0.15rem;
+}
+
+.moodsboard-hero__subtitle {
+    font-size: 0.85rem;
+    color: rgba(220, 215, 240, 0.7);
+    margin: 0;
+}
+
+/* Season tints on the overlay */
+.moodsboard-hero--spring .moodsboard-hero__overlay {
+    background: linear-gradient(to bottom, rgba(20, 50, 30, 0.1), rgba(20, 50, 30, 0.65));
+}
+
+.moodsboard-hero--summer .moodsboard-hero__overlay {
+    background: linear-gradient(to bottom, rgba(60, 40, 10, 0.1), rgba(60, 40, 10, 0.65));
+}
+
+.moodsboard-hero--autumn .moodsboard-hero__overlay {
+    background: linear-gradient(to bottom, rgba(50, 20, 5, 0.1), rgba(50, 20, 5, 0.72));
+}
+
+.moodsboard-hero--winter .moodsboard-hero__overlay {
+    background: linear-gradient(to bottom, rgba(10, 20, 50, 0.1), rgba(10, 20, 50, 0.72));
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .moodsboard-hero:hover .moodsboard-hero__image {
+        transform: none;
+    }
+}
+
+/* Container */
+.moodsboard-intro {
+    padding: 2rem 2.25rem;
+    margin: 2rem 0;
+    border-radius: 18px;
+
+    background: rgba(22, 18, 30, 0.55);
+    /* cinematic dusk */
+    border: 1px solid rgba(150, 130, 190, 0.35);
+
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    backdrop-filter: blur(14px) saturate(140%);
+
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+    animation: seasonal-border-shift 10s ease-in-out infinite;
+}
+
+/* Grain overlay */
+.moodsboard-intro::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.12'/%3E%3C/svg%3E");
+    border-radius: inherit;
+}
+
+/* Main title */
+.moodsboard-intro__title {
+    margin: 0 0 1.5rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #f8f6ff;
+    font-weight: 600;
+}
+
+/* Section headings */
+.moodsboard-intro__heading {
+    margin: 1.5rem 0 0.5rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #eae6ff;
+    letter-spacing: 0.03em;
+    position: relative;
+    padding-left: 1.75rem;
+    outline: none;
+}
+
+.moodsboard-intro__heading:focus-visible {
+    outline: 2px solid rgba(196, 175, 255, 0.8);
+    outline-offset: 6px;
+    border-radius: 4px;
+}
+
+.moodsboard-intro__heading::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 1.75rem;
+    top: calc(100% + 0.6rem);
+    max-width: min(32ch, 80vw);
+    padding: 0.55rem 0.75rem;
+    border-radius: 10px;
+    border: 1px solid rgba(190, 165, 255, 0.35);
+    background: rgba(20, 16, 28, 0.92);
+    color: #efe9ff;
+    font-size: 0.8rem;
+    font-weight: 500;
+    line-height: 1.45;
+    letter-spacing: 0.01em;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4), 0 0 16px rgba(170, 145, 245, 0.22);
+    opacity: 0;
+    transform: translateY(-4px) scale(0.98);
+    transform-origin: top left;
+    pointer-events: none;
+    z-index: 8;
+    transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.moodsboard-intro__heading:hover::after,
+.moodsboard-intro__heading:focus-visible::after {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Body text */
+.moodsboard-intro__text {
+    margin: 0 0 0.75rem;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #e7e4f2;
+    max-width: 65ch;
+}
+
+/* Left glow bar */
+.moodsboard-intro::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(to bottom,
+            rgba(180, 150, 255, 0.8),
+            rgba(120, 90, 200, 0.4));
+    /* Cinematic violet glow */
+    box-shadow: 0 0 18px rgba(180, 150, 255, 0.6);
+    border-radius: 6px;
+    animation: glow-breathe 3.5s ease-in-out infinite;
+}
+
+.moodsboard-intro__heading::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.35rem;
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%,
+            hsl(calc(300 - var(--orb-progress, 0) * 60), 90%, 92%),
+            hsl(calc(260 + var(--orb-progress, 0) * 70), 65%, 68%));
+    box-shadow: 0 0 8px rgba(180, 150, 255, 0.6);
+    animation: orb-pulse 4s ease-in-out infinite;
+    transition: background 0.4s ease;
+}
+
+/* Day */
+.mode-day .moodsboard-intro__heading::before {
+    background: radial-gradient(circle, #fff7d1, #ffd98a);
+}
+
+/* Evening */
+.mode-evening .moodsboard-intro__heading::before {
+    background: radial-gradient(circle, #ffd4e8, #d88ac7);
+}
+
+/* Weather – Rain */
+.mode-rain .moodsboard-intro__heading::before {
+    background: radial-gradient(circle, #cfe7ff, #8bb7e8);
+}
+
+/* Cinematic */
+.mode-cinematic .moodsboard-intro__heading::before {
+    background: radial-gradient(circle, #f8f6ff, #b497ff);
+}
+
+.mode-day .moodsboard-intro {
+    background: rgba(255, 245, 225, 0.55);
+    border-color: rgba(255, 210, 150, 0.45);
+    color: #3a2f2a;
+}
+
+.mode-evening .moodsboard-intro {
+    background: rgba(60, 40, 70, 0.55);
+    border-color: rgba(200, 150, 220, 0.45);
+    color: #f3e8ff;
+}
+
+.mode-rain .moodsboard-intro {
+    background: rgba(40, 60, 80, 0.55);
+    border-color: rgba(140, 180, 220, 0.45);
+    color: #e8f2ff;
+}
+
+.mode-cinematic .moodsboard-intro {
+    background: rgba(22, 18, 30, 0.55);
+    border-color: rgba(150, 130, 190, 0.45);
+    color: #f8f6ff;
+}
+
+/* ============================================================
+   Keyframe animations
+   ============================================================ */
+
+@keyframes glow-breathe {
+
+    0%,
+    100% {
+        box-shadow: 0 0 10px rgba(180, 150, 255, 0.35);
+        opacity: 0.75;
+    }
+
+    50% {
+        box-shadow: 0 0 28px rgba(180, 150, 255, 0.9);
+        opacity: 1;
+    }
+}
+
+@keyframes seasonal-border-shift {
+    0% {
+        border-color: rgba(150, 130, 190, 0.45);
+    }
+
+    20% {
+        border-color: rgba(130, 170, 255, 0.50);
+    }
+
+    40% {
+        border-color: rgba(200, 160, 240, 0.50);
+    }
+
+    60% {
+        border-color: rgba(100, 180, 210, 0.45);
+    }
+
+    80% {
+        border-color: rgba(190, 155, 220, 0.50);
+    }
+
+    100% {
+        border-color: rgba(150, 130, 190, 0.45);
+    }
+}
+
+@keyframes orb-pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 6px rgba(180, 150, 255, 0.4);
+        transform: scale(1);
+    }
+
+    50% {
+        box-shadow: 0 0 14px rgba(200, 170, 255, 0.85);
+        transform: scale(1.12);
+    }
+}
+
+/* ============================================================
+   CinematicDivider
+   ============================================================ */
+
+.cinematic-divider {
+    height: 1px;
+    margin: 2rem 0;
+    background: linear-gradient(to right,
+            transparent,
+            rgba(180, 150, 255, 0.55) 20%,
+            rgba(200, 170, 255, 0.85) 50%,
+            rgba(180, 150, 255, 0.55) 80%,
+            transparent);
+    box-shadow: 0 0 10px rgba(180, 150, 255, 0.2);
+    position: relative;
+}
+
+.cinematic-divider::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #f8f6ff 20%, #b497ff);
+    box-shadow: 0 0 12px rgba(180, 150, 255, 0.85);
+}
+
+/* ============================================================
+   Intro footer block
+   ============================================================ */
+
+.moodsboard-intro__footer {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(150, 130, 190, 0.3);
+    text-align: center;
+}
+
+.moodsboard-intro__footer-text {
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(220, 210, 255, 0.6);
+    margin: 0;
+}
+
+/* ============================================================
+   Reduced motion
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .moodsboard-intro,
+    .moodsboard-intro::after,
+    .moodsboard-intro__heading::before {
+        animation: none;
+    }
+
+    .moodsboard-intro__heading::after {
+        transition: none;
+    }
+}
+
+.moodsboard-hero__orb {
+    position: absolute;
+    top: 30%;
+    right: 18%;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    z-index: 2;
+    filter: blur(2px);
+    animation: orbFloat 8s ease-in-out infinite alternate;
+    transition: background 0.6s ease, box-shadow 0.6s ease;
+}
+
+@keyframes orbFloat {
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(-18px);
+    }
+}
+
+
+
+.moodsboard-hero {
+    width: 100%;
+    height: 260px;
+    border-radius: 18px;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Soft atmospheric overlay */
+.moodsboard-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(20, 16, 28, 0.45);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+}
+
+.moodsboard-hero__title {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.75rem;
+    font-size: 2rem;
+    color: #f8f6ff;
+    letter-spacing: 0.04em;
+    z-index: 2;
+}
+
+.mode-day .moodsboard-hero {
+    background-image: url("/images/day-dawn-glow.jpg");
+}
+
+.mode-evening .moodsboard-hero {
+    background-image: url("/images/evening-cloudy-haze.jpg");
+}
+
+.mode-rain .moodsboard-hero {
+    background-image: url("/images/weather-rain-streak-blur.jpg");
+}
+
+.mode-snow .moodsboard-hero {
+    background-image: url("/images/weather-snow-grain.jpg");
+}
+
+.mode-cinematic .moodsboard-hero {
+    background-image: url("/images/cinematic-atmosphere.jpg");
+}
+
+.moodsboard-hero {
+    transition: background-image 0.6s ease, filter 0.6s ease;
+}
+
+/* Additional overlay tints for cinematic mode */
+
+.mode-cinematic .moodsboard-hero__overlay {
+    background: radial-gradient(circle at 70% 30%,
+            rgba(255, 240, 255, 0.25),
+            rgba(20, 16, 28, 0.55));
+}
+
+.app.season-spring .moodsboard-hero {
+    background-image: url("/images/season-spring-haze.jpg");
+}
+
+.app.season-summer .moodsboard-hero {
+    background-image: url("/images/season-summer-dawn.jpg");
+}
+
+.app.season-autumn .moodsboard-hero {
+    background-image: url("/images/season-autumn-haze.jpg");
+}
+
+.app.season-winter .moodsboard-hero {
+    background-image: url("/images/season-winter-snowgrain.jpg");
+}
+
+.app.mode-day .moodsboard-hero__orb {
+    background: radial-gradient(circle, #fff7d1, #ffd98a);
+    box-shadow: 0 0 40px rgba(255, 215, 140, 0.6);
+}
+
+.app.mode-evening .moodsboard-hero__orb {
+    background: radial-gradient(circle, #ffd4e8, #d88ac7);
+    box-shadow: 0 0 40px rgba(216, 138, 199, 0.6);
+}
+
+.app.mode-rain .moodsboard-hero__orb {
+    background: radial-gradient(circle, #cfe7ff, #8bb7e8);
+    box-shadow: 0 0 40px rgba(139, 183, 232, 0.6);
+}
+
+.app.mode-snow .moodsboard-hero__orb {
+    background: radial-gradient(circle, #e8f2ff, #bcd4f5);
+    box-shadow: 0 0 40px rgba(188, 212, 245, 0.6);
+}
+
+.app.mode-cinematic .moodsboard-hero__orb {
+    background: radial-gradient(circle, #f8f6ff, #b497ff);
+    box-shadow: 0 0 50px rgba(180, 151, 255, 0.7);
+}
+
+/* Shimmer effect */
+
+.moodsboard-hero__shimmer {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.15) 50%,
+            transparent 100%);
+    opacity: 0.25;
+    mix-blend-mode: screen;
+    animation: shimmerMove 6s ease-in-out infinite;
+    z-index: 2;
+}
+
+@keyframes shimmerMove {
+    0% {
+        transform: translateX(-40%);
+    }
+
+    100% {
+        transform: translateX(40%);
+    }
+}
+
+.app.mode-day .moodsboard-hero__shimmer {
+    background: linear-gradient(120deg, transparent, rgba(255, 230, 180, 0.25), transparent);
+}
+
+.app.mode-evening .moodsboard-hero__shimmer {
+    background: linear-gradient(120deg, transparent, rgba(255, 180, 220, 0.25), transparent);
+}
+
+.app.mode-rain .moodsboard-hero__shimmer {
+    background: linear-gradient(120deg, transparent, rgba(180, 210, 255, 0.25), transparent);
+}
+
+.app.mode-snow .moodsboard-hero__shimmer {
+    background: linear-gradient(120deg, transparent, rgba(220, 240, 255, 0.25), transparent);
+}
+
+.app.mode-cinematic .moodsboard-hero__shimmer {
+    background: linear-gradient(120deg, transparent, rgba(200, 160, 255, 0.25), transparent);
+}
+
+.moodsboard-hero {
+    background-size: 110%;
+    animation: heroDrift 22s ease-in-out infinite alternate;
+}
+
+@keyframes heroDrift {
+    0% {
+        background-position: 50% 50%;
+    }
+
+    100% {
+        background-position: 52% 48%;
+    }
+}
+
+/* ============================================================
+   Quotes section
+   ============================================================ */
+
+.moodsboard-hero__quote::before {
+    content: "";
+}
+
+.app.season-spring .moodsboard-hero__quote::before {
+    content: "“New light, new colour, new beginnings.”";
+}
+
+.app.season-summer .moodsboard-hero__quote::before {
+    content: "“Warmth, brightness, and open skies.”";
+}
+
+.app.season-autumn .moodsboard-hero__quote::before {
+    content: "“Soft amber, quiet shifts, gentle change.”";
+}
+
+.app.season-winter .moodsboard-hero__quote::before {
+    content: "“Stillness, clarity, and quiet light.”";
+}

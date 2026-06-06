@@ -8,6 +8,7 @@ import {
 } from './data/moodboard.js';
 import CinematicMoodsBoardPage from './CinematicMoodsBoardPage.jsx';
 import MoodsboardAbout from './components/AboutMoodsBoard.jsx';
+import MoodsboardIntro from './components/MoodsboardIntro.jsx';
 import FamilyFooter from './components/FamilyFooter.jsx';
 import MiniMenu from './components/MiniMenu.jsx';
 import ScrollButtons from './components/ScrollButtons.jsx';
@@ -297,6 +298,7 @@ function App() {
         <Route path="/" element={<MoodsBoardPage />} />
         <Route path="/home" element={<MoodsBoardPage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/moodsboard-intro" element={<MoodsboardIntro />} />
         <Route path="/moodsboard-cinematic" element={<CinematicMoodsBoardPage />} />
       </Routes>
     </>

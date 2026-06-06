@@ -1,0 +1,19 @@
+.moodsboard-hero__quote::before {
+    content: "";
+}
+
+.app.season-spring .moodsboard-hero__quote::before {
+    content: "“New light, new colour, new beginnings.”";
+}
+
+.app.season-summer .moodsboard-hero__quote::before {
+    content: "“Warmth, brightness, and open skies.”";
+}
+
+.app.season-autumn .moodsboard-hero__quote::before {
+    content: "“Soft amber, quiet shifts, gentle change.”";
+}
+
+.app.season-winter .moodsboard-hero__quote::before {
+    content: "“Stillness, clarity, and quiet light.”";
+}

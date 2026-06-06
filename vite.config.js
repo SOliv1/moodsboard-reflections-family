@@ -9,6 +9,7 @@ export default defineConfig(({ command }) => ({
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: [
+        
         'favicon.png',
         'pwa/favicon-16x16.png',
         'pwa/favicon-32x32.png',
@@ -56,7 +57,8 @@ export default defineConfig(({ command }) => ({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg,jpg,jpeg,webp,json}'],
-        globIgnores: ['**/impressionist-orb-identity-upscaled.png']
+        globIgnores: ['**/impressionist-orb-identity-upscaled.png'],
+        maximumFileSizeToCacheInBytes: 20 * 1024 * 1024
       }
     })
   ]

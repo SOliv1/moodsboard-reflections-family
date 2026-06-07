@@ -1,19 +1,35 @@
-.moodsboard-hero__quote::before {
-    content: "";
+.moodsboard-hero__quote {
+    position: absolute;
+    left: 50%;
+    bottom: 1.2rem;
+    transform: translateX(-50%);
+    z-index: 4;
+    width: min(92%, 42rem);
+    text-align: center;
 }
 
-.app.season-spring .moodsboard-hero__quote::before {
+.moodsboard-hero__quote::before {
+    content: "";
+    display: block;
+    color: rgba(244, 241, 255, 0.94);
+    font-size: clamp(0.85rem, 1.8vw, 1rem);
+    font-style: italic;
+    letter-spacing: 0.02em;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.45);
+}
+
+.moodsboard-hero--spring .moodsboard-hero__quote::before {
     content: "“New light, new colour, new beginnings.”";
 }
 
-.app.season-summer .moodsboard-hero__quote::before {
+.moodsboard-hero--summer .moodsboard-hero__quote::before {
     content: "“Warmth, brightness, and open skies.”";
 }
 
-.app.season-autumn .moodsboard-hero__quote::before {
+.moodsboard-hero--autumn .moodsboard-hero__quote::before {
     content: "“Soft amber, quiet shifts, gentle change.”";
 }
 
-.app.season-winter .moodsboard-hero__quote::before {
+.moodsboard-hero--winter .moodsboard-hero__quote::before {
     content: "“Stillness, clarity, and quiet light.”";
 }

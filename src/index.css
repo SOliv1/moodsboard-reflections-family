@@ -264,6 +264,55 @@ body {
     box-shadow: 0 8px 18px -16px rgba(63, 48, 39, 0.55);
 }
 
+.boutique-house-return {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    min-height: 2.75rem;
+    padding: 0.62rem 1.15rem;
+    border: 1px solid #8b6f83;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #604858 0%, #73596c 58%, #8b6f83 100%);
+    color: #fffaf4;
+    box-shadow:
+        0 10px 20px -14px rgba(23, 19, 16, 0.88),
+        0 0 0 1px rgba(255, 250, 244, 0.14) inset;
+    font: inherit;
+    font-weight: 700;
+    letter-spacing: 0.035em;
+    line-height: 1.15;
+    text-decoration: none;
+    transition:
+        border-color 0.22s ease,
+        box-shadow 0.22s ease,
+        transform 0.22s ease,
+        filter 0.22s ease;
+}
+
+.boutique-house-return span {
+    font-size: 1.05em;
+    transition: transform 0.22s ease;
+}
+
+.boutique-house-return:hover,
+.boutique-house-return:focus-visible {
+    border-color: #fffaf4;
+    color: #fffaf4;
+    filter: brightness(1.08) saturate(1.05);
+    outline: none;
+    text-decoration: none;
+    transform: translateY(-1px);
+    box-shadow:
+        0 13px 24px -14px rgba(23, 19, 16, 0.95),
+        0 0 0 3px rgba(139, 111, 131, 0.24);
+}
+
+.boutique-house-return:hover span,
+.boutique-house-return:focus-visible span {
+    transform: translate(2px, -2px);
+}
+
 .chip {
     border: 1px solid #b8a08a;
     background: #f9f2e5;

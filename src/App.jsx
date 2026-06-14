@@ -394,6 +394,14 @@ function MoodsBoardPage() {
               {label}
             </Link>
           ))}
+          <a
+            className="boutique-house-return"
+            href="https://boutique-house-production-751b.up.railway.app/"
+            aria-label="Return to the Boutique House website"
+          >
+            Boutique House
+            <span aria-hidden="true">↗</span>
+          </a>
         </div>
       </header>
 
